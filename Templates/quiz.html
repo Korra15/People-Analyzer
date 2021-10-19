@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personality Test</title>
+    </head>
+    <body>
+        <h1>Personality test</h1>
+            <form action="/submittest", method="post">
+                <h4>
+                {% for question in questions_list %}
+                
+                    {{question.question}} <br>
+                    <input type="radio" name="{{question.q_id}}" value="{{question.option1}}"> Strongly disagree
+                    <input type="radio" name="{{question.q_id}}" value="{{question.option2}}"> Disagree
+                    <input type="radio" name="{{question.q_id}}" value="{{question.option3}}"> Neither disagree nor agree
+                    <input type="radio" name="{{question.q_id}}" value="{{question.option4}}"> Agree
+                    <input type="radio" name="{{question.q_id}}" value="{{question.option5}}"> Strongly agree
+                </h4>
+                
+                {% endfor %}
+
+                <br><br>
+                <input type="submit" name="submitform" value="Submit">
+            </form>
+
+    </body>
+</html>
