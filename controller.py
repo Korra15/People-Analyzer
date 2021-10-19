@@ -25,7 +25,7 @@ q2 = Question(2,"Tends to find fault with others ", 1, 2, 3, 4, 5)
 
 questions_list = [q1, q2]
 
-@app.route("/test")
+@app.route("/")
 def test():
     return render_template("quiz.html", questions_list= questions_list)
 
