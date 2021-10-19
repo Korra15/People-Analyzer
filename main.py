@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+app=Flask(__name__,template_folder='Templates')
 
 class Question:
     q_id = -1
@@ -25,7 +25,7 @@ q2 = Question(2,"Tends to find fault with others ", 1, 2, 3, 4, 5)
 
 questions_list = [q1, q2]
 
-@app.route("/")
+@app.route("/test")
 def test():
     return render_template("quiz.html", questions_list= questions_list)
 
