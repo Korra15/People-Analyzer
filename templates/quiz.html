@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Pumpkin's Multi Quiz</title>
+        <title>Personality Test</title>
         
     </head>
     <body>
@@ -13,7 +13,7 @@
                 <h2>{{ ques.question }}</h2>
 
                 {% for answer in ques.answers %}
-                <input type="radio" id="{{ id }}" name="{{ ques.id }}"> {{ answer }}<br>
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="{{ ques.values[answer] }}"> {{ answer }}<br>
                 {% endfor %}
 
                 {% endfor %}
