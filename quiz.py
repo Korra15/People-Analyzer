@@ -3,37 +3,36 @@ from flask import Blueprint, render_template, request
 quiz = Blueprint('quiz', __name__)
 
 
-class Question:
-    q_id = -1
-    question = ""
-    option1 = 1
-    option2 = 2
-    option3 = 3
-    option4 = 4
-    option5 = 5
+questions = [
+    {
+        "id": "1",
+        "question": "Is talkative",
+        "answers": ["a) Strongly disagree", "b) Disagree", "c) Neither", "d) Agree", "e)Strongly agree"],
+        "values": [1 , 2, 3, 4, 5]
+    },
+    {
+        "id": "2",
+        "question": "Tends to find fault with others",
+        "answers": ["a) Strongly disagree", "b) Disagree", "c) Neither", "d) Agree", "e)Strongly agree"],
+        "values":[1 , 2, 3, 4, 5]
+    },
+    {
+        "id": "3",
+        "question": "How many counties are there in England?",
+        "answers": ["a) Strongly disagree", "b) Disagree", "c) Neither", "d) Agree", "e)Strongly agree"],
+        "values":[1 , 2, 3, 4, 5]
+    }
+]
 
-    def __init__(self, q_id, question, option1, option2, option3, option4, option5):
-        self.q_id = q_id
-        self.question = question
-        self.option1 = option1
-        self.option2 = option2
-        self.option3 = option3
-        self.option4 = option4
-        self.option5 = option5
+@quiz.route("/quiz", methods=['POST', 'GET'])
+def personalityTest():
 
-q1 = Question(1,"Is talkative", 1, 2, 3, 4, 5)
-q2 = Question(2,"Tends to find fault with others ", 1, 2, 3, 4, 5)
+    if request.method == 'GET':
+        return render_template("quiz.html", data=questions)
+    if request.method == 'POST':
+        for question in questions:
+            result=request.form
+    return render_template('submittest.html', result=result)
 
-questions_list = [q1, q2]
 
-@quiz.route("/test")
-def test():
-    return render_template("quiz.html", questions_list= questions_list)
-
-@quiz.route("/submittest", methods=['POST', 'GET'])
-def submit():
-    for question in questions_list:
-        selected_option = request.form[q_id]
-        
-    return value
 

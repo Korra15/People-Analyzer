@@ -1,17 +1,12 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_login import login_user
 
-
-
-
 auth = Blueprint('auth', __name__)
 
 from base import User, db, bcrypt
-
-
 
 class RegisterForm(FlaskForm):
     username = StringField(validators=[InputRequired(), Length(

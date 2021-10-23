@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Personality Test</title>
+        <title>Pumpkin's Multi Quiz</title>
+        
     </head>
     <body>
-        <h1>Personality test</h1>
-            <form action="/submittest", method="post">
-                <h4>
-                {% for question in questions_list %}
+        <div>
+            <h1>Personality Test!</h1>
+            <br>
+            <form action="/quiz" method="post">
+                {% for ques in data %}
+                <h2>{{ ques.question }}</h2>
+
+                {% for answer in ques.answers %}
                 
-                    {{question.question}} <br>
-                    <input type="radio" name="{{question.q_id}}" value="{{question.option1}}"> Strongly disagree
-                    <input type="radio" name="{{question.q_id}}" value="{{question.option2}}"> Disagree
-                    <input type="radio" name="{{question.q_id}}" value="{{question.option3}}"> Neither disagree nor agree
-                    <input type="radio" name="{{question.q_id}}" value="{{question.option4}}"> Agree
-                    <input type="radio" name="{{question.q_id}}" value="{{question.option5}}"> Strongly agree
-                </h4>
-                
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="
+                {% for val in ques.values %} 
+                {{val}}
+                 {% endfor %}" > {{ answer }}<br>
+                {% endfor %}
                 {% endfor %}
 
-                <br><br>
-                <input type="submit" name="submitform" value="Submit">
+                {% endfor %}
+                <br>
+                <input type="submit" value="Submit" name="Submit"/>
             </form>
-
+        </div>
     </body>
 </html>
