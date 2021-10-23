@@ -13,12 +13,7 @@
                 <h2>{{ ques.question }}</h2>
 
                 {% for answer in ques.answers %}
-                
-                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="
-                {% for val in ques.values %} 
-                {{val}}
-                 {% endfor %}" > {{ answer }}<br>
-                {% endfor %}
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}"> {{ answer }}<br>
                 {% endfor %}
 
                 {% endfor %}

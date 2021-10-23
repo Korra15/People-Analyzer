@@ -15,3 +15,9 @@ def mainPage():
 def logout():
     logout_user()
     return redirect(url_for("auth.login"))
+    
+    
+@dashboard.route('/about')
+@login_required
+def about():
+    return render_template('about.html')
