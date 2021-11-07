@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "baseTemplate.html" %}
+{% block content %}
+
     <head>
         <title>Personality Test</title>
         
     </head>
     <body>
         <div>
-            <h1>Personality Test!</h1>
+            <h1>Personality Test </h1>
             <br>
-            <form action="/quiz" method="post">
-                {% for ques in data %}
-                <h2>{{ ques.question }}</h2>
-
-                {% for answer in ques.answers %}
-                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="{{ ques.values[answer] }}"> {{ answer }}<br>
+            <form action='/submitquiz', method="post">
+                {% for question in questions_list %}
+                    <br>
+                    <h4>
+                    {{question.question}}
+                    </h4>
+                    <input type="radio" name="{{question.qid}}" value="{{question.option1 }}"> {{question.option1}} <br>
+                    <input type="radio" name="{{question.qid}}" value="{{question.option2 }}"> {{question.option2}} <br>
+                    <input type="radio" name="{{question.qid}}" value="{{question.option3 }}"> {{question.option3}} <br>
+                    <input type="radio" name="{{question.qid}}" value="{{question.option4 }}"> {{question.option4}} <br>
+                    <input type="radio" name="{{question.qid}}" value="{{question.option5 }}"> {{question.option5}} <br>
                 {% endfor %}
-
-                {% endfor %}
+              
                 <br>
-                <input type="submit" value="Submit" name="Submit"/>
+                <input type="submit" name="submitform" value="Submit"/>
             </form>
         </div>
     </body>
-</html>
+{% endblock content %}
