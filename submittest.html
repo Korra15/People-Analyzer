@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Results</title>
+    </head>
+    <body>
+        <div>
+            <h1> Results!</h1>
+            <br>
+            <!--FIRST-->
+                {% if ans1>=24: %}
+                    <h2>Extraversion</h2>          
+                {% else: %}
+                    <h2>Introversion</h2>
+                {% endif %}
+
+            <!--SECOND-->
+                {% if ans1>=24: %}
+                    <h2>Agreeableness</h2>          
+                {% else: %}
+                    <h2>Antagonism</h2>
+                {% endif %}
+
+            <!--THIRD-->
+                {% if ans1>=24: %}
+                    <h2>Conscientiousness</h2>          
+                {% else: %}
+                    <h2>Lack of direction</h2>
+                {% endif %}
+
+            <!--FOURTH-->
+                {% if ans1>=24: %}
+                    <h2>Neuroticism</h2>          
+                {% else: %}
+                    <h2>Emotional stability</h2>
+                {% endif %}
+
+            <!--FIFTH-->
+                {% if ans1>=24: %}
+                    <h2>Openness to Experience</h2>          
+                {% else: %}
+                    <h2>Close-mindedness</h2>
+                {% endif %}
+
+          
+
+            <h2>{{ans1}}   {{ans2}}   {{ans3}}   {{ans4}}    {{ans5}}</h2>
+        </div>
+    </body>
+</html>

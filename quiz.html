@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Personality Test</title>
+        
+    </head>
+    <body>
+        <div>
+            <h1>Personality Test!</h1>
+            <br>
+            <form action="/quiz" method="post">
+                {% for ques in data %}
+                <h2>{{ ques.question }}</h2>
+
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="1"> Strongly Disagree<br>
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="2"> Disagree<br>
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="3"> Neither<br>
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="4"> Agree<br>
+                <input type="radio" id="{{ id }}" name="{{ ques.id }}" value="5"> Strongly Agree<br>
+
+                {% endfor %}
+                <br>
+                <input type="submit" value="Submit" name="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>
