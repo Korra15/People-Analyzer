@@ -1,0 +1,9 @@
+import json
+
+f = open('data.json')
+j = json.load(f)
+questions_list = []
+for i in j['questions_list']:
+    q = Question(**i)
+    questions_list.append(q)
+f.close()
