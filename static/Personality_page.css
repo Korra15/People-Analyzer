@@ -3,8 +3,8 @@ body{
 }
 .quiz{
     position: absolute;
-    margin-left: 37%;
-    margin-right: 35%;
+    margin-left: 35%;
+    margin-right: 20%;
 }
 
 .quiz h1{
