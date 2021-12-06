@@ -1,7 +1,12 @@
 body{
     background-color: #FEF9EF;
 }
-.login{
+
+h1{
+    text-align: center;
+}
+
+.register{
     background-color: #fff;
     position: absolute;
     top: 50%;
@@ -17,19 +22,9 @@ body{
     transform:translate(-50%,-50%);
     border-radius: 10px;
 }
-.login h1{
-    border-bottom: 1px solid black;
-}
 .form{
     text-align: center;
 }
-
-
-.hidden_tag{
-    margin: 3px;
-    background-color: black;
-}
-
 .username{
     margin: 3px;
 }
