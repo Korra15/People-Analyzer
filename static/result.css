@@ -1,0 +1,19 @@
+body{
+    background-color:#FEF9EF ;
+}
+
+.table{
+    top: 10%;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 37%;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+#title,h1{
+    border-bottom: 1px solid black;
+}
+
+th{
+    padding: 10px;
+}

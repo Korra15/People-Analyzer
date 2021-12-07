@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\loginstyle.css">
     <title>Login</title>
 </head>
 <body>
-    <h1> Login Page </h1>
-
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.username }}
-        {{ form.password }}
-        {{ form.submit }}
-    </form>
-
+    <div class="login">
+        
+        <form method="POST" action="" class="form">
+            <h1>Login Page</h1>
+           <div class="hidden_tag"> {{ form.hidden_tag() }}</div> <br>
+           <div class="username"> {{ form.username }}</div><br>
+           <div class="password"> {{ form.password }}</div><br>
+           <div class="submit">  {{ form.submit }}</div> <br>
+              
+        </form>
+    
+    
+    
     <a href="{{url_for('auth.register')}}">Don't have an account? Sign Up</a>
+</div>
 </body>
 </html>

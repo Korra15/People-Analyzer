@@ -2,49 +2,64 @@
 <html lang="en">
     <head>
         <title>Results</title>
+        <link rel="stylesheet" href="static\result.css">
     </head>
     <body>
-        <div>
-            <h1> Results!</h1>
+        <div class="table" >
+            <h1 id="title"> Results!</h1>
             <br>
-            <!--FIRST-->
+            <table>
+                <tr>
+                <!--FIRST-->
                 {% if ans1>=24: %}
-                    <h2>Extraversion</h2>          
+                    <th><h1>Extraversion</h1></th>
+                    <td><h1>{{ans1}}</h1></td>          
                 {% else: %}
-                    <h2>Introversion</h2>
+                    <th><h1>Introversion</h1></th>
+                    <td><h1>{{ans1}}</h1></td> 
                 {% endif %}
-
+                </tr>
+                <tr>
             <!--SECOND-->
                 {% if ans1>=24: %}
-                    <h2>Agreeableness</h2>          
+                    <th><h1>Agreeableness</h1></th>
+                    <td><h1>{{ans2}}</h1></td>          
                 {% else: %}
-                    <h2>Antagonism</h2>
+                    <th><h1>Antagonism</h1></th>
+                    <td><h1>{{ans2}}</h1></td>
                 {% endif %}
-
+                </tr>
+                <tr>
             <!--THIRD-->
                 {% if ans1>=24: %}
-                    <h2>Conscientiousness</h2>          
+                    <th><h1>Conscientiousness</h1></th>
+                    <td><h1>{{ans3}}</h1></td>       
                 {% else: %}
-                    <h2>Lack of direction</h2>
+                    <th><h1>Lack of direction</h1></th>
+                    <td><h1>{{ans3}}</h1></td>
                 {% endif %}
-
+            </tr>
+            <tr>
             <!--FOURTH-->
                 {% if ans1>=24: %}
-                    <h2>Neuroticism</h2>          
+                    <th><h1>Neuroticism</h1></th>
+                    <td><h1>{{ans4}}</h1></td>          
                 {% else: %}
-                    <h2>Emotional stability</h2>
+                    <th><h1>Emotional stability</h1></th>
+                    <td><h1>{{ans4}}</h1></td>
                 {% endif %}
-
+            </tr>
+            <tr>
             <!--FIFTH-->
                 {% if ans1>=24: %}
-                    <h2>Openness to Experience</h2>          
+                    <th><h1>Openness to Experience</h1></th>
+                    <td><h1>{{ans5}}</h1></td>          
                 {% else: %}
-                    <h2>Close-mindedness</h2>
+                    <th><h1>Close-mindedness</h1></th>
+                    <td><h1>{{ans5}}</h1></td>
                 {% endif %}
-
-          
-
-            <h2>{{ans1}}   {{ans2}}   {{ans3}}   {{ans4}}    {{ans5}}</h2>
+            </tr>
+            </table>
         </div>
     </body>
 </html>

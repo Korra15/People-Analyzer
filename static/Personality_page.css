@@ -1,0 +1,18 @@
+body{
+    background-color:#FEF9EF
+}
+.quiz{
+    position: absolute;
+    margin-left: 35%;
+    margin-right: 20%;
+}
+
+.quiz h1{
+    text-align: center;
+    margin: 10px;
+}
+
+#submits{
+    margin-left: 37%;
+}
+

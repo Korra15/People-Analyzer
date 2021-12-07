@@ -193,6 +193,11 @@ def personalityTest():
         ans3=0
         ans4=0
         ans5=0
+        per1=0
+        per2=0
+        per3=0
+        per4=0
+        per5=0
         new_list=[]
 
         for question in questions:
@@ -281,5 +286,10 @@ def personalityTest():
                     else:
                         ans5=ans5+int(new_list[element])
             counter=counter+1
+        per1=((ans1-1)/40)*100
+        per2=(ans2/45)*100
+        per3=(ans3/45)*100
+        per4=(ans4/40)*100
+        per5=((ans5+6)/50)*100
     
-    return render_template('submittest.html', result=new_list, ans1=ans1-1, ans2=ans2, ans3=ans3, ans4=ans4, ans5=ans5+6)
+    return render_template('submittest.html', result=new_list, ans1=per1, ans2=per2, ans3=per3, ans4=per4, ans5=per5)
