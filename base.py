@@ -6,6 +6,7 @@ from flask_bcrypt import Bcrypt
 import auth 
 import dashboard  
 import quiz 
+import chatbot
 
 
 
@@ -35,6 +36,8 @@ app.register_blueprint(auth.auth)
 app.register_blueprint(dashboard.dashboard)
 
 app.register_blueprint(quiz.quiz)
+
+app.register_blueprint(chatbot.chatbot)
 
 
  

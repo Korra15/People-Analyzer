@@ -1,0 +1,41 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\loginstyle.css">
+    <title>ChatBot</title>
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h3 style="text-align: center; font-size: 40px;">Clear all your doubts!!!</h3>
+        <hr noshade="">
+    </center>
+
+
+  <form method="POST"> 
+
+  <div>
+    <label style="font-size:300%; color:blue;"> User: </label>
+    <input type="text" name="textbox"  value = {{user_text}}>  
+  </div>
+
+
+
+  <button class="button button1" type="submit" name="submit" style="font-size:200%;" >
+    Ask Me
+  </button>  
+
+ 
+  <br>
+  <label style="font-size:300%; color: blue; padding-top: 20px;"> Bot: </label> 
+  <label style="font-size:300%; color: black;"> {{output}} </label> <br>
+ 
+  </form>
+
+</body>
+{% endblock content %}
