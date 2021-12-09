@@ -1,0 +1,43 @@
+{% extends "baseTemplate.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\loginstyle.css">
+    <title>Extraversion</title>
+    </style>
+</head>
+<body>
+    <h1>
+        Question 1: 
+    </h1> 
+    
+
+
+    <img src="{{url_for('static', filename='extraMain.png')}}" alt="Scenario-1">
+
+    <p>
+        <h1>
+            What would you choose?
+        </h1>
+
+        <a href="{{url_for('scenarios.extra1')}}">
+            <button type="button" style="margin-right: 40px;"> Option 1 </button>
+        </a>
+        <a href="{{url_for('scenarios.extra2')}}">
+            <button type="button"  style="margin-right: 40px;" > Option 2 </button>
+        </a>
+
+        <a href="{{url_for('scenarios.scenario')}}">
+            <button type="button" > Back </button>
+        </a>  
+    
+        
+    </p>
+
+    
+</body>
+
+
+{% endblock content %}
