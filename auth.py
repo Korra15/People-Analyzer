@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for
+from flask.helpers import flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
@@ -55,6 +56,6 @@ def register():
         new_user = User(username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('login'))
+        return redirect(url_for('auth.login'))
 
     return render_template('register.html', form=form)
