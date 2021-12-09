@@ -10,13 +10,22 @@
 </head>
 <body>
     
-    <button type="button" href='#'> Openness </button> 
+    <a href="{{url_for('scenarios.open')}}">
+        <button type="button"> Openness </button>
+    </a>
+  
     <a href="{{url_for('scenarios.consi')}}">
         <button type="button"> Conscientiousness </button>
     </a>    
-    <button type="button" href='#'> Extraversion </button>
-    <button type="button" href='#'> Agreeableness </button>
-    <button type="button" href='#'> Neuroticism </button>
+    
+    <a href="{{url_for('scenarios.extra')}}">
+        <button type="button"> Extraversion </button>
+    </a>
+
+    <a href="{{url_for('scenarios.agree')}}">
+        <button type="button"> Agreeableness </button>
+    </a>
+
 
 </body>
 
