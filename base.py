@@ -7,6 +7,7 @@ import auth
 import dashboard  
 import quiz 
 import chatbot
+import scenarios
 
 
 
@@ -39,6 +40,7 @@ app.register_blueprint(quiz.quiz)
 
 app.register_blueprint(chatbot.chatbot)
 
+app.register_blueprint(scenarios.scenarios)
 
  
 
