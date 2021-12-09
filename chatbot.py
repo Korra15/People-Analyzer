@@ -26,7 +26,7 @@ def chat():
     nltk.download('punkt', quiet=True)
 
     # get the article
-    article = Article('https://www.who.int/india/emergencies/coronavirus-disease-(covid-19)')
+    article = Article('https://www.simplypsychology.org/big-five-personality.html')
     article.download()
     article.parse()
     article.nlp()
@@ -37,7 +37,7 @@ def chat():
     text = corpus
     sens_lst = nltk.sent_tokenize(text)  # sentense list
 
-    a1 = Article('https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19#:~:text=symptoms')
+    a1 = Article('https://www.verywellmind.com/the-big-five-personality-dimensions-2795422')
     a1.download()
     a1.parse()
     a1.nlp()
@@ -45,7 +45,7 @@ def chat():
     text = corpus
     sens_lst.append(text)
 
-    a2 = Article('https://www.who.int/news-room/q-a-detail/coronavirus-disease-(covid-19)-vaccines?adgroupsurvey={adgroupsurvey}&gclid=CjwKCAiAgc-ABhA7EiwAjev-j0k-0vsnLgrDYYbw2YD3MyEeT-szPs_WUbi2G_EvwfxNk1gDeCpvABoC5WAQAvD_BwE')
+    a2 = Article('https://www.123test.com/personality-agreeableness/')
     a2.download()
     a2.parse()
     a2.nlp()
@@ -53,7 +53,15 @@ def chat():
     text = corpus
     sens_lst.append(text)
 
-    a5 = Article('https://pune.gov.in/corona-virus-updates/')
+    a5 = Article('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3833658/#:~:text=available%20upon%20request.-,Antagonism,traits%20(see%20Figure%204).')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
+    text = corpus
+    sens_lst.append(text)
+    
+    a5 = Article('https://www.britannica.com/topic/personality')
     a5.download()
     a5.parse()
     a5.nlp()
@@ -61,19 +69,60 @@ def chat():
     text = corpus
     sens_lst.append(text)
 
-    a6 = Article('https://www.business-standard.com/article/current-affairs/maharashtra-covid-19-vaccination-resumes-in-mumbai-pune-after-two-days-121011900468_1.html')
-    a6.download()
-    a6.parse()
-    a6.nlp()
-    corpus = a6.text
+    a5 = Article('https://en.wikipedia.org/wiki/Personality')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
     text = corpus
     sens_lst.append(text)
 
-    a8 = Article('https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-schools')
-    a8.download()
-    a8.parse()
-    a8.nlp()
-    corpus = a8.text
+    a5 = Article('https://www.merriam-webster.com/dictionary/personality')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
+    text = corpus
+    sens_lst.append(text)
+
+    a5 = Article('https://en.wikipedia.org/wiki/Openness_to_experience')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
+    text = corpus
+    sens_lst.append(text)
+
+    a5 = Article('https://en.wikipedia.org/wiki/Conscientiousness')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
+    text = corpus
+    sens_lst.append(text)
+
+    a5 = Article('https://en.wikipedia.org/wiki/Extraversion_and_introversion')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
+    text = corpus
+    sens_lst.append(text)
+
+
+    a5 = Article('https://en.wikipedia.org/wiki/Agreeableness')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
+    text = corpus
+    sens_lst.append(text)
+
+    a5 = Article('https://en.wikipedia.org/wiki/Neuroticism')
+    a5.download()
+    a5.parse()
+    a5.nlp()
+    corpus = a5.text
     text = corpus
     sens_lst.append(text)
 
