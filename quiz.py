@@ -292,10 +292,10 @@ def personalityTest():
         per4=(ans4/40)*100
         per5=((ans5+6)/50)*100
         
-        per1= "{:.2f}".format(float)
-        per2= "{:.2f}".format(float)
-        per3= "{:.2f}".format(float)
-        per4= "{:.2f}".format(float)
-        per5= "{:.2f}".format(float)
+        per1= round(per1, 2)
+        per2= round(per2, 2)
+        per3= round(per3, 2)
+        per4= round(per4, 2)
+        per5= round(per5, 2)
     
     return render_template('submittest.html', result=new_list, ans1=per1, ans2=per2, ans3=per3, ans4=per4, ans5=per5)
